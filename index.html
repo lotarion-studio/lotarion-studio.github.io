@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lotarion — Indie Game Studio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0a0015;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+  .bg {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 20%, rgba(120,0,255,0.2) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 60% at 80% 80%, rgba(255,0,120,0.15) 0%, transparent 70%);
+    animation: bgShift 8s ease-in-out infinite alternate;
+  }
+  @keyframes bgShift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(40deg); }
+  }
+  .content { position: relative; z-index: 1; max-width: 600px; }
+  .logo {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    background: linear-gradient(135deg, #ff6bff, #ffd700, #00e5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(255,107,255,0.4));
+    margin-bottom: 12px;
+  }
+  .tagline {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .games-title {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+  .games {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .game-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px 28px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+    backdrop-filter: blur(10px);
+  }
+  .game-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.1);
+  }
+  .game-icon { font-size: 2.5rem; margin-bottom: 8px; }
+  .game-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+  .game-desc {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+  }
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #7b2ff7, #ff2d78);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .link {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .link:hover { color: #ff6bff; }
+  footer {
+    position: relative; z-index: 1;
+    margin-top: 48px;
+    color: rgba(255,255,255,0.15);
+    font-size: 0.75rem;
+  }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="content">
+  <div class="logo">LOTARION</div>
+  <div class="tagline">Indie Game Studio</div>
+
+  <div class="games-title">Our Games</div>
+  <div class="games">
+    <div class="game-card">
+      <div class="game-icon">✨</div>
+      <div class="game-name">GemBlast</div>
+      <div class="game-desc">Match-3 Puzzle</div>
+      <div class="badge">Available on Google Play</div>
+    </div>
+  </div>
+
+  <div class="links">
+    <a href="/privacy" class="link">Privacy Policy</a>
+    <a href="mailto:lotarion.studio@gmail.com" class="link">Contact</a>
+  </div>
+</div>
+
+<footer>© 2026 Lotarion. All rights reserved.</footer>
+</body>
+</html>
